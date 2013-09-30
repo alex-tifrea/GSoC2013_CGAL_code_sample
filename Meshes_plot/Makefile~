@@ -1,0 +1,19 @@
+all: plot_sphere plot_knot1 plot_heart
+
+plot_sphere: plot_sphere.o
+	g++ plot_sphere.o -o plot_sphere -lglut -lGLU -g
+
+plot_sphere.o: plot_sphere.cpp
+	g++ -c plot_sphere.cpp -g
+
+plot_knot1: plot_knot1.o
+	g++ plot_knot1.o -o plot_knot1 -lglut -lGLU -g
+
+plot_knot1.o: plot_knot1.cpp
+	g++ -c plot_knot1.cpp -g
+
+plot_heart: plot_heart.o
+	g++ plot_heart.o -o plot_heart -lglut -lGLU -g
+
+plot_heart.o: plot_heart.cpp
+	g++ -c plot_heart.cpp -g
